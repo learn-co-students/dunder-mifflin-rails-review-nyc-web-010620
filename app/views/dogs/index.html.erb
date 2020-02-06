@@ -1,0 +1,13 @@
+<div align="center"><h1> Mifflin's Mutts </h1></div>
+
+<br>
+
+
+<div align="center">
+    <%= button_to "Most Popular", sort_path(@dogs) %>
+    <ul style="list-style-type:none;">
+        <% @dogs.each do |d| %>
+          <li><h2>  <%= link_to d.name, dog_path(d) %> </h2></li>
+        <%end%>
+    </ul>
+</div>

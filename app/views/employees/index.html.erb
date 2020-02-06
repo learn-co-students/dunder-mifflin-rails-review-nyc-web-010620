@@ -1,0 +1,11 @@
+<div align="center"><h1> Dundler Mifflin Employees</h1></div>
+
+<br>
+
+<div align="center">
+    <ul class="columns" data-columns="2" style="list-style-type:none;">
+        <% @employees.each do |emp| %>
+          <li><h2><%= link_to emp.first_name+" "+emp.last_name, employee_path(emp) %></h2></li>
+        <%end%>
+    </ul>
+</div>
