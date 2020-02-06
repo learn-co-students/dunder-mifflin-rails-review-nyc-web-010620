@@ -1,0 +1,7 @@
+<%= form_for @dog do |f| %>
+Name: <%= f.text_field :name %><br />
+Breed : <%= f.text_field :breed %><br />
+Age:    <%= f.text_field :age %><br />
+<%=f.collection_check_boxes :employee_ids, Employee.all, :id, :first_name%>
+  <br><%= f.submit "Create a new Dog" %>
+<% end %>
