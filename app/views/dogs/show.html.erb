@@ -1,0 +1,20 @@
+<div> <h1> <%= @dog.name %>'s Profile </h1> </div>
+
+<br>
+
+<div>
+    <ul style="list-style-type:none;">
+        <li><h2>Breed: <%= @dog.breed %> </h2></li>
+        <li><h2>Age: <%= @dog.age %> </h2></li>
+    </ul>
+
+<br>
+Working with :
+<ul>
+<% @employees.each do |e| %>
+    <%if e.dog == @dog%>
+       <li><h3> <%= link_to e.first_name+" "+e.last_name, employee_path(e)%> </h3></li>
+    <%end%>
+<%end%>
+</ul>
+</div>
