@@ -1,0 +1,7 @@
+<%=form_for @dog do |f|%>
+<%=f.text_field :name %>
+<%=f.text_field :breed %>
+<%=f.text_field :age %>
+<%= f.collection_select :employee_id, Employee.all, :id, :first_name %>
+<%= f.submit%>
+<%end%>
