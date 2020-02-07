@@ -1,0 +1,11 @@
+<% if flash[:message] %>
+    <%= flash[:message] %>
+<% end %>
+
+<h1>Dunder Mifflin Employee</h1>
+Name <%= @employee.first_name %> <%= @employee.last_name %><br>
+Alias <%= @employee.alias %><br>
+Title <%= @employee.title %><br>
+Office <%= @employee.office %><br>
+Pet <%= @employee.dog.name %> - <%= @employee.dog.breed %> - <%= @employee.dog.age %><br>
+<%= image_tag @employee.img_url  %>
